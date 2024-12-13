@@ -22,18 +22,40 @@ export class PostApiComponent {
   }
 
   results:any = [];
-
+  i = 0;
 
   onSaveCard() {
+    /* the api we are using for the example is not working anymore so we are using another down  with other structure, but working
+    this.http.post("https://api.freeapi.app/api/v1/ecommerce/products",this.itemObj).
+    subscribe((res: any) => {
+      this.results = res,
+      console.log(this.results)
+     })*/
 
+
+
+    /* fetch(  URL , BODY , HEADERS ) --> en el body pasa un objecto con el método y el body en el que van los datos
+    y luego está el header que es fijo */
+      fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        body: JSON.stringify({
+          title: this.itemObj.name,
+          body: this.itemObj.description,
+          userId: +1,
+        }),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      })
+        .then((response) => response.json())
+        .then((json) => console.log(json));
+         this.i++;
   }
 
+
+
   onResetCard() {
-    this.http.post("https://api.freeapi.app/api/v1/ecommerce/products",this.itemObj).
-      subscribe((res: any) => {
-        this.results = res,
-        console.log(this.results)
-    })
+
 
   }
 }
