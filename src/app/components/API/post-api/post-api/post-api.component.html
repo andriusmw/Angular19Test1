@@ -1,0 +1,18 @@
+
+<div>
+
+    <div class="card">
+      <label>Name:</label>
+      <input [(ngModel)]="itemObj.name"] type="text" name="name" placeholder="name"/>
+
+      <label>Description:</label>
+      <input [(ngModel)]="itemObj.description"] type="text" name="description" placeholder="description"/>
+
+      <label>Price:</label>
+      <input [(ngModel)]="itemObj.price"] type="number" name="price" placeholder="price"/>
+
+      <button (click)="onSaveCard()">Add item</button>
+      <button (click)="onResetCard()">Reset form</button>
+    </div>
+
+</div>

@@ -1,22 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GetApiComponent } from './get-api.component';
+import { PostApiComponent } from './post-api.component';
 
-
-
-
-
-describe('GetApiComponent', () => {
-  let component: GetApiComponent;
-  let fixture: ComponentFixture<GetApiComponent>;
+describe('PostApiComponent', () => {
+  let component: PostApiComponent;
+  let fixture: ComponentFixture<PostApiComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [GetApiComponent]
+      imports: [PostApiComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(GetApiComponent);
+    fixture = TestBed.createComponent(PostApiComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
