@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NgClassComponent } from "./components/ng-class/ng-class.component";
 import { GetApiComponent } from "./components/API/get-api/get-api.component";
-import { PostApiComponent } from "./components/API/post-api/post-api.component";
+import { PostApiComponent } from "./components/API/post-api/post-api/post-api.component";
 
 
 @Component({
