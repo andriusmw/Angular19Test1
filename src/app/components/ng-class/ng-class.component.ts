@@ -10,4 +10,8 @@ import { Component } from '@angular/core';
 export class NgClassComponent {
 
     divBgColor: string ="bg-success"
+
+    addDivColor(className: string) {
+      this.divBgColor = className;
+    }
 }
