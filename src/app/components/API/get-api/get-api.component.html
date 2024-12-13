@@ -1,0 +1,39 @@
+<p>get-api works!</p>
+
+<div class="row">
+  <div class="col-3">
+    <button class="btn bg-success" (click)="getUsers()">Get users</button>
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="col-6">
+    <table>
+
+      <thead>
+        <tr>
+          <th>Sr No</th>
+          <th>Name</th>
+          <th>UserName</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Website</th>
+        </tr>
+      </thead>
+
+      <tbody>
+          <tr *ngFor="let user of userList">
+            <td >{{user.id}}</td>
+            <td >{{user.name }}</td>
+            <td > {{user.username}}</td>
+            <td > {{user.email}}</td>
+            <td > {{user.phone}}</td>
+            <td > {{user.address}}</td>
+          </tr>
+      </tbody>
+
+
+    </table>
+  </div>
+</div>
